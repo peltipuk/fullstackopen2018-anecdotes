@@ -1,9 +1,12 @@
 const initialNotification = 'Initial notification'
 
 const reducer = (store = initialNotification, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'NOTIFICATION': {
       return action.notification
+    }
+    case 'REMOVE_NOTIFICATION': {
+      return ''
     }
   }
   return store
@@ -16,5 +19,9 @@ const notification = (notification) => {
   }
 }
 
-export { notification }
+const removeNotification = () => {
+  return { type: 'REMOVE_NOTIFICATION' }
+}
+
+export { notification, removeNotification }
 export default reducer
