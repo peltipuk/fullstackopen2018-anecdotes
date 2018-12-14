@@ -1,6 +1,8 @@
 import React from 'react'
+import { vote } from '../reducers/anecdoteReducer'
 
 class AnecdoteList extends React.Component {
+
   render() {
     const anecdotes = this.props.store.getState()
     return (
@@ -14,7 +16,7 @@ class AnecdoteList extends React.Component {
             <div>
               has {anecdote.votes}
               <button onClick={() =>
-                this.props.store.dispatch({ type: 'VOTE', id: anecdote.id })
+                this.props.store.dispatch(vote(anecdote.id))
               }>
                 vote
               </button>

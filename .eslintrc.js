@@ -39,6 +39,7 @@ module.exports = {
             "error",
             "never"
         ],
+        "no-unused-vars": 2,
         "default-case": 0,
         "eqeqeq": "error",
         "no-trailing-spaces": "error",

@@ -34,4 +34,20 @@ const reducer = (store = initialState, action) => {
   return store
 }
 
+const vote = (id) => {
+  console.log('returning vote object')
+  return {
+    type: 'VOTE',
+    id: id
+  }
+}
+
+const create = (content) => {
+  return {
+    type: 'CREATE',
+    content: content
+  }
+}
+
+export { vote, create }
 export default reducer
