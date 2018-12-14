@@ -18,4 +18,13 @@ class App extends React.Component {
   }
 }
 
+switch ('hello') {
+  case 'hello':
+    console.log('hello')
+    break
+  case 'hi':
+    console.log('hi')
+    break
+}
+
 export default App

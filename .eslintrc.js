@@ -22,7 +22,10 @@ module.exports = {
     "rules": {
         "indent": [
             "error",
-            2
+            2,
+            {
+                "SwitchCase": 1
+            }
         ],
         "linebreak-style": [
             "error",
@@ -36,6 +39,7 @@ module.exports = {
             "error",
             "never"
         ],
+        "default-case": 0,
         "eqeqeq": "error",
         "no-trailing-spaces": "error",
         "object-curly-spacing": [
