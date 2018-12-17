@@ -26,8 +26,9 @@ class AnecdoteList extends React.Component {
     return (
       <div>
         <h2>Anecdotes</h2>
-        <Filter store={this.props.store} />
-        {this.props.anecdotes.filter(a => a.content.indexOf(this.props.filter) >= 0).sort((a, b) => b.votes - a.votes).map(anecdote =>
+        <Filter />
+        {this.props.anecdotesToShow.map(anecdote =>
+
           <div key={anecdote.id}>
             <div>
               {anecdote.content}
@@ -47,8 +48,9 @@ class AnecdoteList extends React.Component {
 
 const mapStateToProps = (state) => (
   {
-    anecdotes: state.anecdotes,
-    filter: state.filter,
+    anecdotesToShow: state.anecdotes
+      .filter(a => a.content.indexOf(state.filter) >= 0)
+      .sort((a, b) => b.votes - a.votes)
   }
 )
 
