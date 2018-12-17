@@ -13,6 +13,7 @@ const reducer = (store = initialNotification, action) => {
 }
 
 const notification = (notification) => {
+  console.log('creating notification action')
   return {
     type: 'NOTIFICATION',
     notification: notification
@@ -20,6 +21,7 @@ const notification = (notification) => {
 }
 
 const removeNotification = () => {
+  console.log('creating remove_notification action')
   return { type: 'REMOVE_NOTIFICATION' }
 }
 
