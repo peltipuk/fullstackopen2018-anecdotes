@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 class AnecdoteList extends React.Component {
 
   handleVote = (id) => () => {
-    const anecdote = this.props.anecdotes.find(a => a.id === id)
+    const anecdote = this.props.anecdotesToShow.find(a => a.id === id)
     this.props.vote(id)
     this.props.notification(`You voted '${anecdote.content}'`)
     setTimeout(() => {
