@@ -8,8 +8,9 @@ const reducer = (store = initialNotification, action) => {
     case 'REMOVE_NOTIFICATION': {
       return ''
     }
+    default:
+      return store
   }
-  return store
 }
 
 const notification = (notification) => {
